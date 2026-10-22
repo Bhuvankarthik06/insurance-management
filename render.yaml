@@ -1,11 +1,11 @@
-﻿services:
+services:
   - type: web
     name: insurance-management
     env: python
     region: oregon
     plan: free
-    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate"
-    startCommand: "gunicorn insurancemanagement.wsgi:application"
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate
+    startCommand: gunicorn insurancemanagement.wsgi:application
     envVars:
       - key: SECRET_KEY
         generateValue: true

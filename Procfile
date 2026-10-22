@@ -1,1 +1,1 @@
-web: gunicorn insurancemanagement.wsgi --log-file -
+web: gunicorn insurancemanagement.wsgi:application
