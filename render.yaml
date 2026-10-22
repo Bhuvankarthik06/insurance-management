@@ -1,9 +1,10 @@
-services:
+﻿services:
   - type: web
     name: insurance-management
     env: python
     region: oregon
     plan: free
+    runtime: python
     buildCommand: "./build.sh"
     startCommand: "gunicorn insurancemanagement.wsgi:application"
     envVars:
