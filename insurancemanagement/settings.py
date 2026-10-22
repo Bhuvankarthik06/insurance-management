@@ -139,7 +139,6 @@ LOGIN_REDIRECT_URL='/afterlogin'
 
 # Security settings (enabled in production)
 if not DEBUG:
-    SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_HSTS_SECONDS = 31536000
